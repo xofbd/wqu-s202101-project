@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, request
 
-from location_info import generate_sunset_message, retrieve_local_ip_address
+from message import generate_sunset_message, retrieve_local_ip_address
 
 app = Flask(__name__)
 DEPLOY = os.getenv('DEPLOY')
