@@ -1,6 +1,6 @@
 # How to contribute
 
-Contributions are welcomed and opened to all students of the WQU Unit I Data Science module of the fall 2020 session. To contribute, follow these steps.
+Contributions are welcomed and opened to all students of the WQU Unit I Data Science module of the spring 2021 session. To contribute, follow these steps.
 
 1. Unless there's an issue open that your contribution will address, create a new issue. Please explain the purpose of your proposed changes.
 1. Create a branch with your changes. Make sure to follow the git and code styles shown in the sections below.
