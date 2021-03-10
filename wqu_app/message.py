@@ -29,20 +29,21 @@ def get_sun_info(ip_address):
 
 
 def generate_sunset_message(ip_address):
-    """Return string of sunset message"""
-    data = get_sun_info(ip_address)
-    sunset_time = data['results']['sunset']
+    """Return string of sunset message."""
+    data_location = get_location(ip_address)
+    data_sun = get_sun_info(ip_address)
 
-    return f"The sun will set at {sunset_time} UTC."
+    sunset_time = data_sun['results']['sunset']
+    city = data_location['city']
+
+    return f"The sun will set at {sunset_time} UTC in {city}."
 
 
 def main():
     ip_address = retrieve_local_ip_address()
-    location_data = get_location(ip_address)
     message = generate_sunset_message(ip_address)
 
     print(f"Your IP address is: {ip_address}")
-    print(f"You are located in {location_data['city']}")
     print(message)
 
 
