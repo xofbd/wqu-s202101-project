@@ -71,6 +71,7 @@ Please see the contributing guidelines found in [`CONTRIBUTING.md`](CONTRIBUTING
 Thanks to the following people who have contributed to this project:
 
 * [xofbd](https://github.com/xofbd)
+* [96RadhikaJadhav](https://github.com/96RadhikaJadhav/)
 
 ## License
 
