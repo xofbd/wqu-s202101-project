@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath wqu_app app:app
+web: bin/deploy-app prod
