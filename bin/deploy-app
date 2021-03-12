@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [[ $1 == dev ]]; then
+    export FLASK_APP=wqu_app/app.py
+    export FLASK_ENV=development
+    flask run
+elif [[ $1 == prod ]]; then
+    gunicorn --pythonpath wqu_app app:app
+else
+    echo "No valid positional argument given."
+    echo "Usage: deploy-app dev or deploy-app prod"
+fi
