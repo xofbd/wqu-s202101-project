@@ -1,14 +1,17 @@
 #!/bin/bash
 
+DIR_APP=wqu_app
+
 if [[ $1 == dev ]]; then
-    export FLASK_APP=wqu_app/app.py
+    export FLASK_APP=$DIR_APP/app.py
     export FLASK_ENV=development
     HOST=${2:-127.0.0.1}
     
     flask run --host=$HOST
 elif [[ $1 == prod ]]; then
-    gunicorn --pythonpath wqu_app app:app
+    gunicorn --pythonpath $DIR_APP app:app
 else
-    echo "No valid positional argument given."
-    echo "Usage: deploy-app dev or deploy-app prod"
+    echo "No valid first positional argument given."
+    echo "Usage: deploy-app dev HOST [OPTIONAL]"
+    echo "or:    deploy-app prod HOST [OPTIONAL]"
 fi
